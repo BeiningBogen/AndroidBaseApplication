@@ -12,7 +12,7 @@ fun PluginDependenciesSpec.kapt(): PluginDependencySpec = kotlin("kapt")
 
 fun PluginDependenciesSpec.kotlinKapt(): PluginDependencySpec = id("kotlin-kapt")
 
-fun PluginDependenciesSpec.googleServices(): PluginDependencySpec = id("com.google.gms.google-services")
+fun PluginDependenciesSpec.kotlinxSerialization(): PluginDependencySpec = kotlin("org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}")
 
 const val versions = "com.github.ben-manes.versions"
 
@@ -22,4 +22,5 @@ object Classpath {
     const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val androidGradle = "com.android.tools.build:gradle:${Versions.kotlin}"
     const val navigationSafeArgs = "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0"
+
 }

@@ -10,3 +10,17 @@ fun Project.addDaggerDI() {
         add("kapt", Libraries.Dagger2.dagger2AndroidAnnotationProcessor)
     }
 }
+
+fun Project.kotlinxSerialization() {
+    dependencies {
+        add("implementation", Libraries.Dagger2.dagger2)
+    }
+}
+
+fun Project.kTor() {
+    dependencies {
+        add("implementation", Libraries.Ktor.ktor)
+        add("implementation", Libraries.Ktor.ktorAndroid)
+        add("implementation", Libraries.Ktor.ktorSerialization)
+    }
+}
