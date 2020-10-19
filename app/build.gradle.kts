@@ -1,38 +1,17 @@
-import configuration.setAppConfig
-import configuration.setBuildTypeConfig
-
 plugins {
-    androidApp()
-    // id("com.ebb.androidbaseapplication")
-    android()
-    kotlinKapt()
-    id("kotlin-android")
+    id("com.android.application")
+    id("common-module-plugin") // Not working
+    id("kotlin-kapt")
 }
 
-apply(plugin = "androidx.navigation.safeargs.kotlin")
-
 android {
-    setAppConfig()
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
-    }
-    setDefaultSigningConfigs(project)
-
-    setBuildTypeConfig()
-    setProperty("archivesBaseName", "${configuration.Config.applicationId}-v${configuration.Config.versionName}(${configuration.Config.versionCode}).apk")
-
-    sourceSets {
-        getByName("androidTest").java.srcDirs("src/androidTest/kotlin")
-        getByName("debug").java.srcDirs("src/debug/kotlin")
-        getByName("staging").java.srcDirs("src/staging/kotlin")
-        getByName("main").java.srcDirs("src/main/kotlin")
-        getByName("test").java.srcDirs("src/test/kotlin")
+    defaultConfig {
+        applicationId = "com.ebb.androidbaseapplication"
     }
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation(project(":networking"))
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.4.10")
     implementation("androidx.core:core-ktx:1.3.2")
@@ -49,7 +28,7 @@ dependencies {
     implementation(Libraries.Dagger2.dagger2)
     implementation(Libraries.Dagger2.dagger2Android)
     implementation(Libraries.Dagger2.dagger2AndroidSupport)
-    kapt(Libraries.Dagger2.dagger2AnnotationProcessor)
+    kapt(Libraries.Dagger2.dagger2Compiler)
     kapt(Libraries.Dagger2.dagger2AndroidAnnotationProcessor)
 
     // ANDROIDX
@@ -91,4 +70,94 @@ dependencies {
     // OTHER
     api(Libraries.Other.timber)
 
+    // Custom modules
+    implementation(project(":networking"))
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// androidApp()
+// kotlinKapt()
+// android()
+// id("kotlin-android")
+
+
+
+
+
+
+
+
+// apply(plugin = "androidx.navigation.safeargs.kotlin")
+
+/*android {
+    setAppConfig()
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    setDefaultSigningConfigs(project)
+
+    setBuildTypeConfig()
+    setProperty("archivesBaseName", "${configuration.Config.applicationId}-v${configuration.Config.versionName}(${configuration.Config.versionCode}).apk")
+
+    sourceSets {
+        getByName("androidTest").java.srcDirs("src/androidTest/kotlin")
+        getByName("debug").java.srcDirs("src/debug/kotlin")
+        getByName("staging").java.srcDirs("src/staging/kotlin")
+        getByName("main").java.srcDirs("src/main/kotlin")
+        getByName("test").java.srcDirs("src/test/kotlin")
+    }
+}*/
