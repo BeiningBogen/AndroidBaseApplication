@@ -3,10 +3,13 @@ import configuration.setBuildTypeConfig
 
 plugins {
     androidApp()
+    // id("com.ebb.androidbaseapplication")
     android()
     kotlinKapt()
     id("kotlin-android")
 }
+
+apply(plugin = "androidx.navigation.safeargs.kotlin")
 
 android {
     setAppConfig()
@@ -25,14 +28,12 @@ android {
         getByName("main").java.srcDirs("src/main/kotlin")
         getByName("test").java.srcDirs("src/test/kotlin")
     }
-
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(project(":networking"))
+
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.4.10")
     implementation("androidx.core:core-ktx:1.3.2")
 
@@ -86,7 +87,7 @@ dependencies {
     implementation(Libraries.LifeCycle.livedataKtx)
     implementation(Libraries.LifeCycle.runtime)
     implementation(Libraries.LifeCycle.viewmodelKtx)
-    
+
     // OTHER
     api(Libraries.Other.timber)
 

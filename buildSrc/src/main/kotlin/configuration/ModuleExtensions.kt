@@ -1,6 +1,5 @@
 package configuration
 
-import Constants
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import org.gradle.api.JavaVersion
@@ -10,7 +9,10 @@ fun BaseAppModuleExtension.setAppConfig() {
     buildToolsVersion(Config.buildTools)
 
     defaultConfig {
-        dataBinding { isEnabled = true }
+        buildFeatures {
+            dataBinding = true
+            viewBinding = true
+        }
 
         minSdkVersion(Config.minSdk)
         targetSdkVersion(Config.targetSdkVersion)

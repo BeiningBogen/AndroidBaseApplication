@@ -2,8 +2,8 @@ object Libraries {
     object Kotlin {
         const val stdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
         const val anko = "org.jetbrains.anko:anko-common:${Versions.anko}"
-        val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
-        val coroutines_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines_test}"
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+        const val coroutines_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines_test}"
     }
 
     object Google {
@@ -61,6 +61,16 @@ object Libraries {
         val runtime = "androidx.lifecycle:lifecycle-runtime:${Versions.runtime}"
         val viewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewmodelKtx}"
     }
+
+    object Ktor {
+        val ktor = "io.ktor:ktor-client-core:${Versions.ktorVersion}"
+        val ktorAndroid = "io.ktor:ktor-client-android:${Versions.ktorVersion}"
+        val ktorSerialization = "io.ktor:ktor-client-serialization:${Versions.ktorVersion}"
+    }
+
+    object KotlinxSerialization {
+        val kotlinxSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.serializationVersion}"
+    }
 }
 
 object Versions {
@@ -113,5 +123,11 @@ object Versions {
 
     // dagger2
     const val dagger2 = "2.28.3"
+
+    // ktor
+    const val ktorVersion = "1.4.0"
+
+    // kotlinx-serialization
+    const val serializationVersion = "1.0.0-RC"
 
 }
