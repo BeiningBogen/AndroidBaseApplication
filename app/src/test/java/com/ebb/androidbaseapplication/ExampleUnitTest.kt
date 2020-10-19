@@ -1,4 +1,4 @@
-package com.ebb.androidanimations
+package com.ebb.androidbaseapplication
 
 import org.junit.Test
 

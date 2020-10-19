@@ -19,7 +19,7 @@ fun BaseAppModuleExtension.setAppConfig() {
             targetCompatibility = JavaVersion.VERSION_1_8
         }
         javaCompileOptions {
-            annotationProcessorOptions.includeCompileClasspath = true
+            // annotationProcessorOptions.includeCompileClasspath = true // Just causes all kinds of havoc after updating to kotlin 1.4.10...
         }
 
         applicationId = Config.applicationId

@@ -1,7 +1,7 @@
 package configuration
 
 object Config {
-    const val applicationId = "com.diffia.nimblepeople"
+    const val applicationId = "com.ebb.androidbaseapplication"
     const val minSdk = 27
     const val compileSdkVersion = 29
     const val targetSdkVersion = 29

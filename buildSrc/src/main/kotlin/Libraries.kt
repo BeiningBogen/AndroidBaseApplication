@@ -65,7 +65,7 @@ object Libraries {
 
 object Versions {
     // Kotlin
-    const val kotlin = "1.3.72"
+    const val kotlin = "1.4.10"
     const val versions = "0.28.0"
     const val anko = "0.10.0"
     const val coroutines = "1.3.9"

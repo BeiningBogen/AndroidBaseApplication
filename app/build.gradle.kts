@@ -6,7 +6,6 @@ plugins {
     android()
     kotlinKapt()
     id("kotlin-android")
-    googleServices()
 }
 
 android {
@@ -41,7 +40,6 @@ dependencies {
     implementation(Libraries.Kotlin.stdLib)
     implementation(Libraries.Kotlin.anko)
     implementation(Libraries.Kotlin.coroutines)
-    // implementation(Libraries.Kotlin.coroutines_test) // Causes 'META-INF/AL2.0' bug.
 
     // GOOGLE
     implementation(Libraries.Google.material)
