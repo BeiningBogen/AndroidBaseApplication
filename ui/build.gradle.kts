@@ -1,6 +1,6 @@
 
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("ui-module-plugin")
     id("kotlin-kapt")
 }

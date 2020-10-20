@@ -1,4 +1,4 @@
-package com.ebb.androidbaseapplication.di.annotations
+package com.ebb.ui.di.annotations
 
 import javax.inject.Scope
 
