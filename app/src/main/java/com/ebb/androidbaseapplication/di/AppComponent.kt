@@ -2,7 +2,7 @@ package com.ebb.androidbaseapplication.di
 
 import com.ebb.androidbaseapplication.di.annotations.AppScope
 import com.ebb.androidbaseapplication.main.MainActivity
-import com.ebb.androidbaseapplication.main.MainFragment
+import com.ebb.ui.HomeFragment
 import dagger.Component
 
 @AppScope
@@ -11,5 +11,5 @@ import dagger.Component
 interface AppComponent {
     fun inject(mainActivity: MainActivity)
 
-    fun inject(fragment: MainFragment)
+    fun inject(fragment: HomeFragment)
 }

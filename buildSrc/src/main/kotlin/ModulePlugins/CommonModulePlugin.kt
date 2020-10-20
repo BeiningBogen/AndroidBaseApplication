@@ -1,3 +1,6 @@
+package ModulePlugins
+
+import Libraries
 import com.android.build.gradle.BaseExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
@@ -68,6 +71,7 @@ class CommonModulePlugin  : Plugin<Project> {
             }
 
 
+            // TODO not as "clean"?
             // Adds required dependencies for all modules.
             project.dependencies {
                 add("implementation", Libraries.Kotlin.stdLib)
@@ -79,7 +83,6 @@ class CommonModulePlugin  : Plugin<Project> {
                 add("androidTestImplementation", "androidx.test.espresso:espresso-core:3.2.0")
             }
         }
-
     }
 
 

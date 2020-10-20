@@ -1,6 +1,7 @@
 object Libraries {
     object Kotlin {
         const val stdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
+        const val kotlinCore = "androidx.core:core-ktx:${Versions.core}"
         const val anko = "org.jetbrains.anko:anko-common:${Versions.anko}"
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
         const val coroutines_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines_test}"
@@ -8,6 +9,10 @@ object Libraries {
 
     object Google {
         const val material = "com.google.android.material:material:${Versions.material}"
+    }
+
+    object Gradle {
+        const val buildTools = "com.android.tools.build:gradle:4.1.0"
     }
 
     object AndroidX {
@@ -23,6 +28,7 @@ object Libraries {
         const val preferences = "androidx.preference:preference-ktx:${Versions.preferences}"
         const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationFragmentKtx}"
         const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigationUiKtx}"
+        const val navigationSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.1"
         const val dataBindingCompiler = "com.android.databinding:compiler:${Versions.dataBindingCompiler}"
 
         object Test {
@@ -55,27 +61,29 @@ object Libraries {
     }
 
     object LifeCycle {
-        val lifeCyclecompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifeCyclecompiler}"
-        val java8 = "androidx.lifecycle:lifecycle-common-java8:${Versions.java8}"
-        val livedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.livedataKtx}"
-        val runtime = "androidx.lifecycle:lifecycle-runtime:${Versions.runtime}"
-        val viewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewmodelKtx}"
+        const val lifeCyclecompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifeCyclecompiler}"
+        const val java8 = "androidx.lifecycle:lifecycle-common-java8:${Versions.java8}"
+        const val livedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.livedataKtx}"
+        const val runtime = "androidx.lifecycle:lifecycle-runtime:${Versions.runtime}"
+        const val viewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewmodelKtx}"
     }
 
     object Ktor {
-        val ktor = "io.ktor:ktor-client-core:${Versions.ktorVersion}"
-        val ktorAndroid = "io.ktor:ktor-client-android:${Versions.ktorVersion}"
-        val ktorSerialization = "io.ktor:ktor-client-serialization:${Versions.ktorVersion}"
+        const val ktor = "io.ktor:ktor-client-core:${Versions.ktorVersion}"
+        const val ktorAndroid = "io.ktor:ktor-client-android:${Versions.ktorVersion}"
+        const val ktorSerialization = "io.ktor:ktor-client-serialization:${Versions.ktorVersion}"
     }
 
     object KotlinxSerialization {
-        val kotlinxSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.serializationVersion}"
+        const val kotlinxSerializationCore = "org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.serializationVersion}"
+        const val kotlinxSerializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0"
     }
 }
 
 object Versions {
     // Kotlin
     const val kotlin = "1.4.10"
+    const val core = "1.3.2"
     const val versions = "0.28.0"
     const val anko = "0.10.0"
     const val coroutines = "1.3.9"

@@ -4,9 +4,13 @@ plugins {
 
 gradlePlugin {
     plugins {
+        register("ui-module-plugin") {
+            id = "ui-module-plugin"
+            implementationClass = "ModulePlugins.UiModulePlugin"
+        }
         register("common-module-plugin") {
             id = "common-module-plugin"
-            implementationClass = "CommonModulePlugin"
+            implementationClass = "ModulePlugins.CommonModulePlugin"
         }
     }
 }
@@ -17,6 +21,7 @@ repositories {
     jcenter()
 }
 
+// TODO Clean up
 dependencies {
     compileOnly(gradleApi())
 
