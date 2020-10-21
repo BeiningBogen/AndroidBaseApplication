@@ -24,10 +24,19 @@ fun Project.androidXDependecies() {
         add("implementation", Libraries.AndroidX.viewmodel)
         add("implementation", Libraries.AndroidX.preferences)
         add("implementation", Libraries.AndroidX.multidex)
-        add("implementation", Libraries.AndroidX.navigationFragmentKtx)
-        add("implementation", Libraries.AndroidX.navigationUiKtx)
+
         add("androidTestImplementation", Libraries.AndroidX.Test.runner)
         add("androidTestImplementation", Libraries.AndroidX.Test.espresso)
+    }
+}
+
+fun Project.navigationComponent() {
+    dependencies {
+        add("implementation", Libraries.AndroidX.navigationFragment)
+        add("implementation", Libraries.AndroidX.navigationUi)
+        add("implementation", Libraries.AndroidX.navigationFragmentKtx)
+        add("implementation", Libraries.AndroidX.navigationUiKtx)
+        // add("implementation", Libraries.AndroidX.navigationSafeArgs)
     }
 }
 

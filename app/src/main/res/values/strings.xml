@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">AndroidBaseApplication</string>
-
-    <!-- Navigation Component -->
-    <string name="main_fragment_label">fragment_main_screen</string>
 </resources>

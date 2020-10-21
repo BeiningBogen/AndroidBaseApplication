@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/home_fragment">
+    app:startDestination="@id/feature_home_graph">
 
-    <fragment
-        android:id="@+id/home_fragment"
-        android:name="com.ebb.ui.HomeFragment"
-        android:label="@string/main_fragment_label"
-        tools:layout="@layout/fragment_home">
-
-    </fragment>
+    <include app:graph="@navigation/feature_home_graph"/>
+    <include app:graph="@navigation/feature_0_graph"/>
 
 </navigation>

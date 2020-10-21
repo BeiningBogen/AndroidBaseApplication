@@ -1,0 +1,4 @@
+<resources>
+    <!-- Navigation Component -->
+    <string name="main_fragment_label">fragment_main_screen</string>
+</resources>

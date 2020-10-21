@@ -1,7 +1,8 @@
-include(":core")
 rootProject.name = "AndroidBaseApplication"
 include(
         ":app",
-        ":ui",
+        ":core",
+        ":feature_0",
+        ":feature_home",
         ":networking"
 )

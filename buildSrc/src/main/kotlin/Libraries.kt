@@ -26,9 +26,13 @@ object Libraries {
         const val lifeCycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifeCycleExtensions}"
         const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewmodel}"
         const val preferences = "androidx.preference:preference-ktx:${Versions.preferences}"
-        const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationFragmentKtx}"
-        const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigationUiKtx}"
-        const val navigationSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.1"
+
+        const val navigationFragment = "androidx.navigation:navigation-fragment:${Versions.navigationVersion}"
+        const val navigationUi = "androidx.navigation:navigation-ui:${Versions.navigationVersion}"
+        const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
+        const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
+        const val navigationSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigationVersion}"
+
         const val dataBindingCompiler = "com.android.databinding:compiler:${Versions.dataBindingCompiler}"
 
         object Test {
@@ -103,8 +107,9 @@ object Versions {
     const val viewmodel = "2.2.0"
     const val preferences = "1.1.1"
     const val multidex = "2.0.1"
-    const val navigationFragmentKtx = "2.3.0-alpha06"
-    const val navigationUiKtx = "2.3.0-alpha06"
+
+    const val navigationVersion = "2.3.1"
+
     const val archCoreTesting = "2.1.0"
     const val coreTesting = "1.3.0"
     const val runner = "1.2.0"

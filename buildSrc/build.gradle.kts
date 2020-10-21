@@ -4,13 +4,18 @@ plugins {
 
 gradlePlugin {
     plugins {
-        register("ui-module-plugin") {
-            id = "ui-module-plugin"
-            implementationClass = "ModulePlugins.UiModulePlugin"
+        register("core-module-plugin") {
+            id = "core-module-plugin"
+            implementationClass = "ModulePlugins.CorePlugin"
         }
-        register("common-module-plugin") {
-            id = "common-module-plugin"
-            implementationClass = "ModulePlugins.CommonModulePlugin"
+        register("feature-home-module-plugin") {
+            id = "feature-home-module-plugin"
+            implementationClass = "ModulePlugins.FeatureHomeModulePlugin"
+        }
+
+        register("feature-0-module-plugin") {
+            id = "feature-0-module-plugin"
+            implementationClass = "ModulePlugins.Feature0ModulePlugin"
         }
     }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feature_home_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.ebb.androidbaseapplication.feature_home.HomeFragment"
+        android:label="@string/main_fragment_label"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_go_to_feature_0"
+            app:destination="@+id/fragment_feauture_0"
+            app:popUpTo="@+id/home_fragment" />
+
+    </fragment>
+
+</navigation>

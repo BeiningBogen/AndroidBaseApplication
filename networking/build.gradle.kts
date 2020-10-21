@@ -1,14 +1,14 @@
 plugins {
-    kotlin("plugin.serialization") version "1.4.10"
     id("com.android.library")
-    id("common-module-plugin")
-    id("kotlin-kapt")
+    id("core-module-plugin")
+    kotlin("plugin.serialization") version "1.4.10"
+    // id("kotlin-kapt")
 }
 
 dependencies {
-    kotlinDependecies()
+    // kotlinDependecies()
 
-    dagger2Dependecies()
+    // dagger2Dependecies()
     kTorDependecies()
     kotlinxSerializationDependecies()
 
