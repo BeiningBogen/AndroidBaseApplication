@@ -1,4 +1,4 @@
-package ModulePlugins
+package moduleplugins
 
 import Libraries
 import com.android.build.gradle.BaseExtension
@@ -7,7 +7,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
-class FeatureHomeModulePlugin  : Plugin<Project> {
+class Feature0ModulePlugin  : Plugin<Project> {
     override fun apply(project: Project) {
         // Apply plugin common to all projects
         project.plugins.apply("kotlin-android")
@@ -35,8 +35,6 @@ class FeatureHomeModulePlugin  : Plugin<Project> {
 
                     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
                 }
-
-
                 viewBinding.isEnabled = true
             }
 

@@ -1,15 +1,12 @@
-package ModulePlugins
+package moduleplugins
 
-import Libraries
 import com.android.build.gradle.BaseExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.dependencies
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.LibraryExtension
-
 
 class CorePlugin  : Plugin<Project> {
     override fun apply(project: Project) {
@@ -17,7 +14,6 @@ class CorePlugin  : Plugin<Project> {
         project.plugins.apply("kotlin-android")
         project.plugins.apply("kotlin-android-extensions")
         project.plugins.apply("androidx.navigation.safeargs.kotlin")
-
 
         val androidExtensions = project.extensions.getByName("android")
         if (androidExtensions is BaseExtension) {
@@ -68,19 +64,6 @@ class CorePlugin  : Plugin<Project> {
                         }
                     }
                 }
-            }
-
-
-            // TODO not as "clean"?
-            // Adds required dependencies for all modules.
-            project.dependencies {
-                add("implementation", Libraries.Kotlin.stdLib)
-                add("implementation", Libraries.AndroidX.ktxCore)
-
-                // Tests
-                add("testImplementation", "junit:junit:4.12")
-                add("androidTestImplementation", "androidx.test.ext:junit:1.1.1")
-                add("androidTestImplementation", "androidx.test.espresso:espresso-core:3.2.0")
             }
         }
     }

@@ -18,4 +18,8 @@ const val versions = "com.github.ben-manes.versions"
 
 fun PluginDependenciesSpec.safeargs(): PluginDependencySpec = id("androidx.navigation.safeargs")
 
-object Classpath {}
+object Kotlin {
+    const val android = "android"
+    const val androidExtensions = "android.extensions"
+    const val kapt = "kapt"
+}

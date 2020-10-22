@@ -12,6 +12,12 @@ fun Project.kotlinDependecies() {
     }
 }
 
+fun Project.gradleTools() {
+    dependencies {
+        add("implementation", Libraries.Gradle.buildTools)
+    }
+}
+
 fun Project.androidXDependecies() {
     dependencies {
         add("implementation", Libraries.AndroidX.appCompat)
